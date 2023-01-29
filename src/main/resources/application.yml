@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: 10.10.0.169
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        #消息预读数量 1表示每次从队列中读取一条消息
+        prefetch: 1
+        #配置手动签收
+        acknowledge-mode: manual
+      direct:
+        #配置手动签收
+        acknowledge-mode: manual
